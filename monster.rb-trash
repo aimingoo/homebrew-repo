@@ -1,11 +1,11 @@
 class Monster < Formula
   desc "Full or incremental static site generator for Ghost"
   homepage "https://github.com/aimingoo/monster"
-  version "1.0.0"
 
-  url "https://github.com/aimingoo/monster/archive/v#{version}.tar.gz"
-  mirror "https://aimingoo.github.io/content/releases/monster/monster-#{version}.tar.gz"
-  sha256 "65651224ebdf36c29e642d87aa0c1e67987fd739d5e65d1d088bccaf064aaa9c"
+  url "https://github.com/aimingoo/monster/archive/v1.0.0.zip"
+  mirror "https://aimingoo.github.io/content/releases/monster/monster-1.0.0.zip"
+  version "1.0.0"
+  sha256 "d8e12958c388ca6078579202db675052a8976a4f1ce1f446b4a5b17b909f0e5d"
 
   def install
     bin.install "libexec/monster.sh" => "monster"
@@ -14,7 +14,7 @@ class Monster < Formula
   end
 
   test do
-    assert_match version.to_s, shell_output("#{bin}/monster --version")
+    assert_match "#{version}", shell_output("monster --version")
     ohai "Okay"
   end
 end
