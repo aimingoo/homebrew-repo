@@ -1,11 +1,11 @@
 class Monster < Formula
   desc "Full or incremental static site generator for Ghost"
   homepage "https://github.com/aimingoo/monster"
-  version "1.0.4"
+  version "1.0.5"
 
   url "https://github.com/aimingoo/monster/archive/v#{version}.tar.gz"
   mirror "https://aimingoo.github.io/content/releases/monster/monster-#{version}.tar.gz"
-  sha256 "bf04d22dde9b7e569cff72554148f711d18621c8d8e7c87b9466c95126ef5506"
+  sha256 "89a7583f2024fc47980d18e26a8e9c4a7c6c54f568aeed79e789d1f3f08df741"
 
   def install
     bin.install "libexec/monster.sh" => "monster"
